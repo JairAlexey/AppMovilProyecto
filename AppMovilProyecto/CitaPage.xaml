@@ -1,0 +1,56 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMovilProyecto.CitaPage"
+             Title="CitaPage"
+             Shell.TabBarIsVisible="False">
+
+    <VerticalStackLayout BackgroundColor="Black">
+
+        <HorizontalStackLayout BackgroundColor="Purple" Padding="10" Background="White">
+            <Image Source="https://marketplace.canva.com/EAFgfLMkJEI/2/0/1600w/canva-logotipo-cl%C3%ADnica-medica-centro-de-salud-geom%C3%A9trico-sencillo-azul-X7d5AiGMhXk.jpg" HeightRequest="50" WidthRequest="100"/>
+            <Label 
+                x:Name="Correo"
+                Text="Clinica Borcelle"
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <ListView x:Name="listaCitas"
+                  RowHeight="80"
+                  ItemSelected="OnClickShowDetails">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Purple" Padding="10">
+                            <Image Source="https://img.freepik.com/vector-premium/cruz-blanca-circulo-rojo-que-usa-referirse-medicina-sombra_661675-1279.jpg"
+                                   HeightRequest="50"
+                                   WidthRequest="100"/>
+                            <StackLayout Orientation="Vertical">
+                                <Label
+                                    Text="{Binding Fecha}"
+                                    VerticalOptions="Start"
+                                    FontSize="20"
+                                    TextColor="White"/>
+                                <Label
+                                    Text="{Binding Descripcion}"
+                                    VerticalOptions="End"
+                                    FontSize="20"
+                                    TextColor="White"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button
+            Text="Nueva Cita"
+            FontSize="20"
+            HorizontalOptions="Fill"
+            BackgroundColor="#f1c40f"
+            TextColor="White"
+            Clicked="OnClickNuevaCita"/>
+    </VerticalStackLayout>
+</ContentPage>

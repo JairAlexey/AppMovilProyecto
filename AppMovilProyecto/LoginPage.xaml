@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMovilProyecto.LoginPage"
+             Title="Hola"
+             Shell.TabBarIsVisible="False">
+
+    <Grid BackgroundColor="White">
+        <!-- Logotipo en la parte superior con margen -->
+        <Image Source="https://marketplace.canva.com/EAFgfLMkJEI/2/0/1600w/canva-logotipo-cl%C3%ADnica-medica-centro-de-salud-geom%C3%A9trico-sencillo-azul-X7d5AiGMhXk.jpg" Aspect="AspectFit" VerticalOptions="Start" HorizontalOptions="Center" HeightRequest="150" Margin="0,40,0,0"/>
+        <!-- Formulario de inicio de sesión con margen superior y padding -->
+        <!-- Formulario de inicio de sesión con margen superior y padding -->
+        <Frame BackgroundColor="Purple" Margin="40,200,40,200" CornerRadius="10">
+            <VerticalStackLayout Spacing="20">
+                <!-- Contenido del formulario -->
+                <Entry 
+                    x:Name="Correo"
+                    Placeholder="Correo" TextColor="White" />
+                <Entry 
+                    x:Name="Clave"                    
+                    Placeholder="Contraseña" IsPassword="True" TextColor="White" />
+
+                <!-- Botón de inicio de sesión -->
+                <Button Text="Ingresar" Clicked="OnClickLogin" BackgroundColor="#f1c40f" TextColor="White" HeightRequest="50" CornerRadius="5"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

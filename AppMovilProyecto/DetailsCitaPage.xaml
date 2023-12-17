@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMovilProyecto.DetailsCitaPage"
+             Title="DetailsCitaPage">
+    <VerticalStackLayout>
+
+        <Image Source="https://images.vexels.com/media/users/3/208291/isolated/preview/02b2830761405fae3d0422091abc8b8d-icono-de-trazo-de-ubicacion-del-hospital.png"
+           HorizontalOptions="Center"
+           HeightRequest="200"/>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Fecha: "
+                FontSize="18"/>
+            <Label x:Name="Fecha"
+                Text="Fecha"
+                FontSize="18"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Hora: "
+                FontSize="18"/>
+            <Label x:Name="Hora"
+                Text="Hora"
+                FontSize="18"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Decripción: "
+                FontSize="18"/>
+            <Label x:Name="Descripcion"
+                Text="Descripcion"
+                FontSize="18"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Id Medico: "
+                FontSize="18"/>
+            <Label x:Name="IdMedico"
+                Text="Id Medico"
+                FontSize="18"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Id Usuario: "
+                FontSize="18"/>
+            <Label x:Name="IdUsuario"
+                Text="Id Usuario"
+                FontSize="18"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Eliminar"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5"
+                    BackgroundColor="Red"
+                    FontSize="20"
+                    Clicked="ClickEliminarProducto">
+
+            </Button>
+            <Button Text="Editar"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5"
+                    BackgroundColor="Orange"
+                    TextColor="Black"
+                    FontSize="20"
+                    Clicked="ClickEditarProducto">
+
+            </Button>
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

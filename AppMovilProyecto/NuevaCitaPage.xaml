@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMovilProyecto.NuevaCitaPage"
+             Title="NuevaCitaPage">
+    <VerticalStackLayout>
+        <TableView>
+            <TableRoot>
+                <TableSection Title="Ingrese los datos para la nueva cita">
+                    <EntryCell x:Name="Fecha"
+                               Placeholder="Fecha"/>
+                    <EntryCell x:Name="Hora"
+                               Placeholder="Hora" />
+                    <EntryCell x:Name="Descripcion"
+                               Placeholder="Descripcion"/>
+                    <EntryCell x:Name="IdMedico"
+                               Placeholder="IdMedico"/>
+                    <EntryCell x:Name="IdUsuario"
+                               Placeholder="IdUsuario"
+                               IsEnabled="False" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button Text="Guardad Cita"
+                Clicked="OnClickGuardarCita"/>
+    </VerticalStackLayout>
+</ContentPage>
